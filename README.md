@@ -45,13 +45,13 @@ const store = createStore(counterReducer);
 
 Now is component time 🕒. Here I created the JSX to create the User Interface. Now here we  need a couple things to happen.
 
-#### Create a function for the onClick action & a dispatch
+#### 🖱️Create a function for the onClick action & a dispatch🖱️
 As we need the case "increment" or "decrement" to happen we must create an action for  each, this actions are created as functions that returns the action type this  way, using the `store.dispatch(f)` method the reducer is called and the state is updated ↪️.
 
-#### Send our state to the component
-In the `ReactDOM.render` we are asking React to render our only component. But our component needs the State that is being managed by our Store, so ✈️ we  must send ✈️ our `store.getState()` via props so we  can use it inside our component 
+#### ✈️Send our state to the component✈️
+In the `ReactDOM.render` we are asking React to render our only component. But our component needs the State that is being managed by our Store, so we  must send our `store.getState()` via props so we  can use it inside our component 
 
-#### Re-render when the state changes
+#### ♻️Re-render when the state changes♻️
 What use a counter has if we can't see, on real time, the count 1️⃣🔟. For so we need to tell our app to re-render when the Store State changes.
 
 So we will wrap up our `ReactDOM.render()` in a Render Function that we will not only call but we will also subscribe to ensure that anytime the state changes, it renders.
