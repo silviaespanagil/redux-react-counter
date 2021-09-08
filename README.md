@@ -26,7 +26,13 @@ This is the first proposed project in where we apply Redux in a very simple app 
 
 The code has two main divisions, one for the Redux Code and another one for the React Code. Notice also that, as this is my first project using both I did not did different components and everything is developed in my index.js
 
-After installin Redux and importing the `{createStore}` function I declared my initialState and did my Reducer. The Reducer contemplates two cases and one default: an increment that will take the state and add 1, a decrement that will take the state and subtract 1 and a default that will take the actual value of our state. With the Reducer declared I created my app Store.
+After installin Redux and importing the `{createStore}` function I declared my initialState and did my Reducer.
+### The createStore function accepts three arguments:
+1. first argument is a function that is normally known as a reducer (required)
+2. second argument is the initial value of the state (optional)
+3. third argument is an enhancer where we can pass middleware, if any (optional)
+
+The Reducer contemplates two cases and one default: an increment that will take the state and add 1, a decrement that will take the state and subtract 1 and a default that will take the actual value of our state. With the Reducer declared I created my app Store.
 
 ```javascript
 const counterReducer = (state = initialState, action) => {
